@@ -1,0 +1,27 @@
+.splash-bg{
+    background-image: url('splash_bg.svg');
+}
+@font-face {
+    font-family: customMyFont;
+    src: url(font.otf);
+  }
+  
+  body {
+    font-family: customMyFont;
+  }
+.title-logo{
+    font-size: 26px!important;
+    font-weight: bold!important;
+    font-family: 'customMyFont'!important;
+    color:linear-gradient(#53E88B, #15BE77)!important;
+}
+
+.img-responsive{
+    width: 100%;
+}
+
+.btn-green{
+    background:linear-gradient(#53E88B, #15BE77)!important;
+    padding: 10px 25px!important;
+    border-radius: 10px!important;
+}
