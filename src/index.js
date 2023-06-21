@@ -7,7 +7,8 @@ import Walkdown1 from './Pages/Walkdown1';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <SplashScreen/> */}
+    <SplashScreen/>
+    <hr></hr>
     <Walkdown1/>
   </React.StrictMode>
 );
