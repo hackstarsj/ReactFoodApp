@@ -14,6 +14,21 @@
     font-weight: bold!important;
     font-family: 'customMyFont'!important;
     color:linear-gradient(#53E88B, #15BE77)!important;
+    background: -webkit-linear-gradient(#53E88B,#15BE77);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title{
+    font-size: 26px!important;
+    font-weight: bold!important;
+    font-family: 'customMyFont'!important;
+}
+.text-green{
+    font-family: 'customMyFont'!important;
+    color:linear-gradient(#53E88B, #15BE77)!important;
+    background: -webkit-linear-gradient(#53E88B,#15BE77);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .img-responsive{
