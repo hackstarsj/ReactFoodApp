@@ -1,5 +1,23 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
 .splash-bg{
     background-image: url('splash_bg.svg');
+}
+.splash-bg-home{
+    background-image: url('home_bg.svg');   
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+}
+.splash-bg-home .layer{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    margin-top: -10px;
+    background-color: #ffffffbf;
 }
 @font-face {
     font-family: customMyFont;
@@ -18,10 +36,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.title{
+.title,.title-home{
     font-size: 26px!important;
     font-weight: bold!important;
     font-family: 'customMyFont'!important;
+}
+.title-small{
+    font-size: 20px!important;
+    font-weight: bold!important;
+    font-family: 'customMyFont'!important;
+}
+.title-home{
+    font-size: 35px!important;
+    text-align: left;
+    padding: 13px;
 }
 .text-green{
     font-family: 'customMyFont'!important;
@@ -31,6 +59,8 @@
     -webkit-text-fill-color: transparent;
 }
 
+
+
 .img-responsive{
     width: 100%;
 }
@@ -39,4 +69,113 @@
     background:linear-gradient(#53E88B, #15BE77)!important;
     padding: 10px 25px!important;
     border-radius: 10px!important;
+}
+.back-btn-icon{
+    background: #f9a84d24;
+    color: #DA6317;
+    padding: 10px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.location-icon{
+    background: #FFE14D;
+    padding: 6px;
+    margin: 0px 10px 0px 0px;
+    border-radius: 100%;
+    margin-top: -6px;
+    color: #E86D28;
+}
+
+.bottom-navigation-custom{
+    width: 96%;
+    border-radius: 10px;
+    border: 1px solid #e2e1e1;
+    position: fixed;
+    bottom: 8px;
+    margin-left: 1.7%;
+    margin-right: 2%;
+    left: 0px;
+    height: 65px!important;
+}
+
+.bottom-navigation-custom button svg{
+    color: #53e88b8a;
+}
+
+.bottom-navigation-custom button.active span{
+    position: absolute;
+    left: 36px;
+    top: 14px;
+    color: black;
+    font-weight: bold;
+    font-family: customMyFont;
+}
+.bottom-navigation-custom button.active svg{
+    color: #15BE77;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.bottom-navigation-custom button.active{
+    position: relative;
+    background: #53e88b4f;
+    margin: 12px;
+    border-radius: 10px;
+}
+.bottom-navigation-custom button .MuiTouchRipple-root{
+    width: 100%;
+    left: 0px!important;
+    top: 0px!important;
+}
+.home-header{
+    z-index: 9;
+    position: inherit;
+    margin-top: 30px;
+    font-size: 55px;
+}
+.notification-icon{
+    width: 40px!important;
+    height: 40px!important;
+    padding: 10px;
+    background: white;
+    margin-top: 30px;
+    color: #15BE77;
+    box-shadow: 1px 1px 1px #e6e6e6;
+    border-radius: 20px;
+}
+.dot-orange{
+    height: 8px;
+    width: 8px;
+    background: #FF4545;
+    position: absolute;
+    border-radius: 5px;
+    top: 46px;
+    right: 38px;
+}
+.custom-search-input.css-1ockilf-MuiFormControl-root{
+    background: #fef6ed;
+    padding: 5px!important;
+    border-radius: 10px;
+    padding-top: 10px!important;
+}
+.custom-search-input .css-v4u5dn-MuiInputBase-root-MuiInput-root:before{
+    border: none!important;
+}
+.custom-search-input .css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
+    border-bottom: 0px!important;
+}
+.custom-search-input .css-1x51dt5-MuiInputBase-input-MuiInput-input {
+    color: #da6317!important;
+}
+.custom-search-input .css-adtwm8-MuiSvgIcon-root {
+    color: #da6317;
+}
+.custom-search-input .css-v4u5dn-MuiInputBase-root-MuiInput-root{
+    margin-left: 12px;
+}
+
+.text-center{
+    text-align: center;
 }
