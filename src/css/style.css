@@ -46,6 +46,14 @@ body{
     font-weight: bold!important;
     font-family: 'customMyFont'!important;
 }
+.title-small-title{
+    font-size: 17px!important;
+    font-weight: bold!important;
+    font-family: 'customMyFont'!important;
+}
+.text-right{
+    text-align: right;
+}
 .title-home{
     font-size: 35px!important;
     text-align: left;
@@ -68,6 +76,11 @@ body{
 .btn-green{
     background:linear-gradient(#53E88B, #15BE77)!important;
     padding: 10px 25px!important;
+    border-radius: 10px!important;
+}
+.btn-green-p2{
+    background:linear-gradient(#53E88B, #15BE77)!important;
+    padding: 5px 10px!important;
     border-radius: 10px!important;
 }
 .back-btn-icon{
