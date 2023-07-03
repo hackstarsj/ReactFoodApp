@@ -8,10 +8,12 @@ import HomeComponent from './Home/HomeComponent';
 import ProfileComponent from './Profile/ProfileComponent';
 import CartComponent from './Cart/CartComponent';
 import ChatComponent from './Chat/ChatComponent';
+import SearchPage from './Search/SearchPage';
 
 export default function MainApp(){
 
     let [value,setValue]=useState('home');
+    let [lastPage,setLastPage]=useState('home');
 
     const handleChange=(event,newvalue)=>{
       setValue(newvalue);
@@ -21,20 +23,32 @@ export default function MainApp(){
     const getPage=(value)=>{
       switch(value){
         case 'home':
-          return <HomeComponent/>
+          return <HomeComponent mainShowSearchPage={mainShowSearchPage}/>
           break;
         case 'profile':
           return <ProfileComponent/>
           break
         case 'cart':
-          return <CartComponent/>
+          return <CartComponent  mainShowSearchPage={mainShowSearchPage}/>
           break;
         case 'chat':
           return <ChatComponent/>
           break;
+        case 'search':
+          return <SearchPage mainShowSearchPage={mainresetSearchPage}/>
+          break;
         default:
           return <HomeComponent/>
       }
+    }
+
+    const mainShowSearchPage=(lastPage)=>{
+      setValue('search');
+      setLastPage(lastPage);
+    }
+
+    const mainresetSearchPage=()=>{
+      setValue(lastPage);
     }
 
     return (

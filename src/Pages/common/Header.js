@@ -7,7 +7,7 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-export default function Header() {
+export default function Header(props) {
   return (
     <>
       <Grid
@@ -50,7 +50,7 @@ export default function Header() {
             </FormControl>
           </Grid>
           <Grid item xs={3}>
-            <img src={"/img/filter.svg"} />
+            <img src={"/img/filter.svg"} onClick={()=>props.showSearchPageLocal()}/>
           </Grid>
         </Grid>
       </Grid>

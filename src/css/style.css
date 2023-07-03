@@ -192,3 +192,13 @@ body{
 .text-center{
     text-align: center;
 }
+
+.custom-chip{
+    background: #fead1d3d!important;
+    color: #da6317!important;
+    font-weight: bold!important;
+    padding: 15px!important;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+    margin: 10px!important;
+}

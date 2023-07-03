@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import RestaurantType from "../../common/RestaurantType";
 import MenuCardList from "../../common/MenuCardList";
 import Header from "../../common/Header";
-export default function HomeComponent(){
+export default function HomeComponent(props){
 
     let restaurantList=[
         {name:'Vegan Resto',image:'/img/restaurant.png',time:'14 Min'},
@@ -25,9 +25,13 @@ export default function HomeComponent(){
         {name:'Smart Resto',image:'/img/menu.png',restaurantName:'Noodle Home'},
     ]
 
+    const showSearchPageLocal=()=>{
+        props.mainShowSearchPage("home")
+    }
+
     return (
         <Grid container sx={{background:'#FCFCFE'}} mb={10}>
-            <Header/>
+            <Header showSearchPageLocal={showSearchPageLocal}/>
             <RestaurantType restaurantType={"Nearest Restaurant"} restaurantList={restaurantList}/>
             <RestaurantType restaurantType={"Popular Restaurant"} restaurantList={restaurantList}/>
             <MenuCardList menuList={menuList} menuType={"Popular Food"} />
