@@ -202,3 +202,80 @@ body{
     padding-bottom: 20px!important;
     margin: 10px!important;
 }
+.online-icon{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background: #53E88B;
+    margin-right: 5px;
+    border-radius: 8px;
+    vertical-align: baseline;
+}
+.call-icon{
+    margin-top: 15px;
+    background: #53e88b2b;
+    padding: 15px;
+    color: #53E88B;
+    border-radius: 30px;
+}
+.text-left{
+    text-align: left;
+}
+.message-left p{
+    background: #F6F6F6;
+    max-width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.message-right {
+    text-align: right;
+}
+.message-right p{
+    background-image:linear-gradient(to right,#53E88B, #15BE77)!important;
+    max-width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.chat-container{
+    height: 56vh;
+    overflow-x: scroll;
+}
+.chat-input fieldset,.chat-input fieldset:focus{
+    border-color: transparent!important;
+    outline: none!important;
+}
+.chat-send{
+    width: 42px!important;
+    height: 42px!important;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #53E88B;
+}
+.call-user{
+    width: 120px;
+    height: 120px;
+    margin-top: 160px;
+    border-radius: 100%;
+    border: 5px solid #53E88B;
+}
+.speaker-icon{
+    background: #18c07833;
+    padding: 16px;
+    font-size: 44px!important;
+    margin: 10px;
+    border-radius: 50%;
+    color: #18C078;
+}
+.close-icon{
+    background: #ff4b4bd4;
+    padding: 16px;
+    margin: 10px;
+    font-size: 44px!important;
+    border-radius: 50%;
+    color: #fff;
+}

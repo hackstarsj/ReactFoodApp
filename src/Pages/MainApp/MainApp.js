@@ -9,11 +9,14 @@ import ProfileComponent from './Profile/ProfileComponent';
 import CartComponent from './Cart/CartComponent';
 import ChatComponent from './Chat/ChatComponent';
 import SearchPage from './Search/SearchPage';
+import ChatInnerComponent from './Chat/ChatInnerComponent';
+import CallComponent from './Calling/CallComponent';
 
 export default function MainApp(){
 
     let [value,setValue]=useState('home');
     let [lastPage,setLastPage]=useState('home');
+    let [displayNav,setDisplayNav]=useState('flex');
 
     const handleChange=(event,newvalue)=>{
       setValue(newvalue);
@@ -32,14 +35,32 @@ export default function MainApp(){
           return <CartComponent  mainShowSearchPage={mainShowSearchPage}/>
           break;
         case 'chat':
-          return <ChatComponent/>
+          return <ChatComponent showChatInnnerScreen={showChatInnnerScreen} mainresetLastPage={mainresetLastPage}/>
           break;
-        case 'search':
+        case 'chatinner':
+          return <ChatInnerComponent mainresetLastPage={mainresetLastPage} showCallingScreen={showCallingScreen}/>
+          break;
+        case 'calling':
+          return <CallComponent mainresetLastPage={mainresetLastPage} />
+          break;
+       case 'search':
           return <SearchPage mainShowSearchPage={mainresetSearchPage}/>
           break;
         default:
           return <HomeComponent/>
       }
+    }
+
+    const showChatInnnerScreen=(chatItem)=>{
+      setValue('chatinner');
+      setDisplayNav('none')
+      setLastPage('chat');
+    }
+
+    const showCallingScreen=()=>{
+      setValue('calling');
+      setDisplayNav('none')
+      setLastPage('chatinner');
     }
 
     const mainShowSearchPage=(lastPage)=>{
@@ -50,11 +71,16 @@ export default function MainApp(){
     const mainresetSearchPage=()=>{
       setValue(lastPage);
     }
+    const mainresetLastPage=(prevpage)=>{
+      setValue(prevpage);
+      setLastPage(prevpage);
+      setDisplayNav('flex')
+    }
 
     return (
         <>
         {getPage(value)}
-        <BottomNavigation value={value} onChange={handleChange} className='bottom-navigation-custom'>
+        <BottomNavigation value={value} onChange={handleChange} className='bottom-navigation-custom'           sx={{display:displayNav}}>
         <BottomNavigationAction
           label="Home"
           value="home"
