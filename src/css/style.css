@@ -74,12 +74,12 @@ body{
 }
 
 .btn-green{
-    background:linear-gradient(#53E88B, #15BE77)!important;
+    background:linear-gradient(to right,#53E88B, #15BE77)!important;
     padding: 10px 25px!important;
     border-radius: 10px!important;
 }
 .btn-green-p2{
-    background:linear-gradient(#53E88B, #15BE77)!important;
+    background:linear-gradient(to right,#53E88B, #15BE77)!important;
     padding: 5px 10px!important;
     border-radius: 10px!important;
 }
@@ -278,4 +278,12 @@ body{
     font-size: 44px!important;
     border-radius: 50%;
     color: #fff;
+}
+.profile-content{
+    margin-top: -40px!important;
+    background: white!important;
+    border-radius: 40px!important;
+    padding-top: 15px!important;
+    margin-bottom: 80px!important;
+
 }
